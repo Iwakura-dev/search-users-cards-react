@@ -3,13 +3,24 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { store } from "./lib/store/store.ts";
-import "./index.css";
 import { HomePage } from "./pages/HomePage/HomePage.tsx";
+import { Layout } from "./components/Layout/Layout.tsx";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      // {
+      //   path: "/favorites",
+      //   element: <FavoritesPage />,
+      // },
+    ],
   },
 ]);
 
