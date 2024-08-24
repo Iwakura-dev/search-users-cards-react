@@ -1,4 +1,6 @@
 .header {
+  display: flex;
+  justify-content: space-between;
   padding: 1rem 2rem;
   box-shadow: 4px 8px 18px 12px rgba(1, 1, 1, 0.2);
   &__logo {
@@ -6,4 +8,13 @@
       color: white;
     }
   }
+  &__list > li,
+  a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+  }
+}
+.active {
+  color: orange;
 }
