@@ -1,20 +1,17 @@
 import React from "react";
-import { InputProps } from "../../../types/interface.types";
+import type { InputProps } from "../../../types/interface.types";
 
 export const Input: React.FC<InputProps> = ({
-  type,
   placeholder,
   value,
   onChange,
-  className,
 }) => {
   return (
     <input
-      type={type}
+      type="text"
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className={className}
     />
   );
 };
