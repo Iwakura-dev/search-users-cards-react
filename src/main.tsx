@@ -6,6 +6,7 @@ import { store } from "./lib/store/store.ts";
 import { HomePage } from "./pages/HomePage/HomePage.tsx";
 import { Layout } from "./components/Layout/Layout.tsx";
 import "./index.css";
+import { FavoritesPage } from "./pages/FavoritePage/FavoritePage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -16,10 +17,10 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
-      // {
-      //   path: "/favorites",
-      //   element: <FavoritesPage />,
-      // },
+      {
+        path: "/favorites",
+        element: <FavoritesPage />,
+      },
     ],
   },
 ]);
