@@ -1,0 +1,9 @@
+.header {
+  padding: 1rem 2rem;
+  box-shadow: 4px 8px 18px 12px rgba(1, 1, 1, 0.2);
+  &__logo {
+    & > a {
+      color: white;
+    }
+  }
+}
